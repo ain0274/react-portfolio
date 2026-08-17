@@ -1,0 +1,13 @@
+.work{
+    width: 100%;
+    background: $gray-color;
+
+    .wrapper{
+        @include wrapper;
+        @include section-padding;
+        
+        h2{
+            @include h2-margin;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.skills {
+    width: 100%;
+    background: #fff;
+
+    .wrapper {
+        @include wrapper;
+        @include section-padding;
+
+        h2 {
+            @include h2-margin;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                width: 130px;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    width: 100%;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-align: center;
+                    word-break: keep-all;
+                    overflow-wrap: break-word;
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .list {
+                align-items: flex-start;
+                justify-content: center;
+                gap: 2rem;
+            }
+        }
+    }
+}

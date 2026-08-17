@@ -1,0 +1,31 @@
+.nav{
+
+    &_list{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        &_item{
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+
+            &:hover,
+            &.active{
+                color: $primary-color;
+            }
+
+            &.active{
+                font-weight: 700;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            gap: 1.2rem;
+
+            &_item {
+                font-size: 16px;
+            }
+        }
+    }
+}

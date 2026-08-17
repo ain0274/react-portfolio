@@ -1,0 +1,20 @@
+.footer{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #aaa;
+    @include section-padding;
+
+    p{
+        color: #fff;
+        text-align: center;
+    }
+
+    .copyrighter{
+        font-weight: 700;
+    }
+}

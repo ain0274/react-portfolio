@@ -1,0 +1,33 @@
+.hero{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    background: linear-gradient(140deg, $primary-light 0%, $primary-color 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .wrapper{
+        @include wrapper;
+        @include section-padding;
+
+        h1{
+            font-size: clamp(3rem, 8vw, 6.25rem); // 최소 48px ~ 최대 100px
+            line-height: 1.15;
+            font-weight: 700;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        
+        p{
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: #fff;
+            text-align: left;
+        }
+    }
+
+}

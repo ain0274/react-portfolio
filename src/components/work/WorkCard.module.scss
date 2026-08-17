@@ -1,0 +1,182 @@
+.work_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card_section{
+        position: relative;
+        width: 100%;
+        height: 200vh;
+
+    }
+
+    .card_sticky{
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 1300px;
+        height: auto;
+        max-height: 600px;
+
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 2rem;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .img_box{
+            flex: 1.4;
+            aspect-ratio: 4 / 3;
+            border-radius: 30px;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        .info_box{
+            flex: 1;
+            min-width: 380px;
+            max-width: 450px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.2rem;
+
+            background: #fff;
+            border-radius: 30px;
+            padding: 3rem;
+
+            h3{
+                font-size: 40px;
+                font-weight: 700;
+                color: $primary-color;
+            }
+
+            .desc {
+                color: #666;
+                line-height: 1.5;
+            }
+
+            .meta{
+                p{
+                    font-weight: 700;
+                }
+            }
+
+            .tags{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: .7rem;
+                margin: 1rem 0 7rem;
+
+                li{
+                    padding: 12px 20px;
+                    border-radius: 50px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    background: $gray-color;
+
+                    &:first-child{
+                        background: $primary-color;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .btn_group{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: .7rem;
+
+                a{
+                    width: 100%;
+                    padding: 15px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-align: center;
+                    border-radius: 10px;
+                    transition: transform 0.2s ease;
+
+                    &:hover{
+                        transform: translateY(-2px);
+                    }
+                }
+
+                .btn_primary{
+                    background: $primary-color;
+                    color: #fff;
+                }
+
+                .btn_secondary{
+                    background: #fff;
+                    color: #000;
+                    border: 1px solid $gray-color;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .card_section{
+            height: auto !important;
+        }
+
+        .card_sticky{
+            position: static;
+            height: auto;
+        }
+
+        .card,
+        .card.reverse {
+            flex-direction: column;
+            align-items: stretch;
+            max-height: none;
+            gap: 30px;
+
+            .img_box {
+                aspect-ratio: 16 / 9;
+                width: 100%;
+            }
+
+            .info_box {
+                min-width: 100%;
+                max-width: 100%;
+                width: 100%;
+                padding: 2rem;
+                margin-bottom: 5rem;
+
+                .tags {
+                    margin: 1rem 0 2rem;
+                    li {
+                        padding: 10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

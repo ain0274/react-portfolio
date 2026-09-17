@@ -4,8 +4,8 @@
 
     .wrapper{
         @include wrapper;
-        @include section-padding;
-        
+        padding: 50px;
+                
         h2{
             @include h2-margin;
         }

@@ -2,6 +2,7 @@ import kuriImg from "@assets/images/projects/kuri.png"
 import photoSplashImg from "@assets/images/projects/photoSplash.png"
 import semiisImg from "@assets/images/projects/semiis.png"
 import pangolinImg from "@assets/images/projects/pangolin.png"
+import pangolinVueImg from "@assets/images/projects/pangolin-vue.png"
 
 export interface Project {
   id: number;
@@ -59,5 +60,16 @@ export const PROJECTS_DATA: Project[] = [
     img: pangolinImg,
     demoUrl: "https://ain0274.github.io/pangolin-dashboard/",
     codeUrl: "https://github.com/ain0274/pangolin-dashboard"
+  },
+  {
+    id: 5,
+    title: "PANGOLIN(Vue)",
+    description: "React로 작업했던 화면을 Vue로 재제작",
+    contribution: "100%",
+    period: "퍼블리싱 2주(2026년)",
+    tags: ["Vue", "JavaScript", "SCSS", "ApexCharts"],
+    img: pangolinVueImg,
+    demoUrl: "https://ain0274.github.io/vue-pangolin/#/",
+    codeUrl: "https://github.com/ain0274/vue-pangolin"
   },
 ];
